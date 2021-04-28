@@ -26,7 +26,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 p {
@@ -60,27 +60,62 @@ a:active {
   height: auto;
 }
 
+.content-image {
+  width: 100%;
+  height: auto;
+}
+
 /*Format page structure*/
 .page-wrap {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-flow: row nowrap;
+  overflow: auto;
+}
+
+section {
+  margin: 0;
+  padding: 0;
 }
 
 .right-col {
   display:flex;
-  align-items: center;
+  align-items: flex-start;
   flex-flow: column nowrap;
 }
 
 
 .left-col {
-  padding-left: 25%;
-  padding-right: 25%;
+  padding-left: 15%;
+  padding-right: 10%;
 }
 
 .main-content p {
   font-size: 2rem;
+}
+
+
+/*Format page with left links and scrolling of main info*/
+.center-col {
+  display:flex;
+  flex-direction: column;
+  min-height: 0;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.center-col .main-content {
+  font-size: 2rem;
+  flex-grow: 1;
+  overflow: auto;
+  min-height: 0;
+  height: 80vh;
+}
+
+.center-col-nav {
+  display:flex;
+  align-items: flex-start;
+  flex-flow: column nowrap;
 }
 
 
@@ -92,6 +127,11 @@ nav ul li a {
 a.current-page {
   color: #101A26;
   text-decoration: none;
+}
+
+/*Format left-col navigation*/
+nav ul li a.local-link {
+  font-size: 2rem;
 }
 
 /*Format publications*/

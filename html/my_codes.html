@@ -11,8 +11,98 @@
     <h1>Programming!!</h1>
     <hr>
     <div class="page-wrap">
-      <section class="left-col">
+      <section class="center-col-nav">
+        <nav>
+          <ul>
+            <li>
+              <a class="local-link" href="#eds-code">EDS Code</a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+      <section class="center-col">
         <section class="main-content">
+          <section class="EDS-program">
+            <h2 id='eds-code'>Electron Dispersion Spectroscopy!</h2>
+            <p>
+               The first scientific program I wrote was in MATLAB! I was
+               a wee little undergrad at Madison doing research on some metal
+               super-alloys. We decided to utilize electron dispersion 
+               spectroscopy (EDS) to analyze the chemical compositions of the
+               materials, and Dave Grierson (a visiting scientist at 
+               Madison/super cool guy) suggested we analyze the data manaully.
+               For that reason, we wrote this EDS code!
+            </p>
+            <img class="content-image" src="../Images/eds_figures/Figure_1.png"
+                 alt="Image of EDS code interface">
+            <p>
+               This is an image of the interface! The program reads in some EDS
+               csv files and then displays a grey image of the sample. The user
+               can then perform an assortment of analyses of the sample. These
+               include:
+            </p>
+            <ul>
+              <li>
+                <p>Element/Oxide mapping,</p>
+                <img class="content-image" 
+                     src="../Images/eds_figures/Figure_2.png"
+                     alt="Image of EDS code interface">
+              </li>
+              <li>
+                <p>linescans with width-averaging,</p>
+                <img class="content-image" 
+                     src="../Images/eds_figures/Figure_3.png"
+                     alt="Image of EDS code interface">
+              </li>
+              <li>
+                <p>region-of-interest analyses,</p>
+                <img class="content-image" 
+                     src="../Images/eds_figures/Figure_4.png"
+                     alt="Image of EDS code interface">
+              </li>
+              <li>
+                <p>and, my personal favorite, threshold mapping!!</p>
+                <img class="content-image" 
+                     src="../Images/eds_figures/Figure_5.png"
+                     alt="Image of EDS code interface">
+              </li>
+            </ul>
+            <p>
+               This was my first ever custom program, so it always has a special
+               place in my heart &lt;3. I wrote the code for the interface, 
+               the loading of the data, for performing
+               the threshold mapping, converting between atomic and weight 
+               percentage, and choosing elements to view data on. Dave and I 
+               collaborated on the line-scan code, element mapping, and 
+               region-of-interest analysis (with him doing a lot of the more
+               complicated math parts haha). Dave also added the ROI list, 
+               Full view, and Zoom parts. 
+            </p>
+            <p>
+               It was a useful tool for our EDS analyses! We used the outputs
+               in a number of publications. The source code is on my github
+               page as well for people to use. I would like to publish it, but
+               the work isn't really novel, so maybe I can submit to an open
+               source software journal sometime instead.
+            </p>
+            <p>
+               In hindsight, I would have preferred to write this software in
+               Python. It is open source and a much better programming language,
+               in my opinion. I actually kind of despise MATLAB now haha. Still,
+               when I wrote this code, I didn't know how to write anything in
+               Python, and I only recently started making graphic user 
+               interfaces (GUIs) in Python.
+            </p>
+            <p>
+               I also would have tried to make the code more user friendly. A
+               lot of the analyses depend on color, which makes it inaccessible
+               to colorblind people. I try to be more concious of that these
+               days. If people were ever interested in it, I'd be happy to 
+               add additional improvements, although, I'm not sure I still have
+               access to a MATLAB subscription :)
+            </p>
+
+          </section>
         </section>
       </section>
       <section class="right-col">
