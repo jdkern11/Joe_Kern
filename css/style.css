@@ -1,0 +1,108 @@
+/* Set all box sizing to border box*/
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+
+*, 
+*::before, 
+*::after {
+  box-sizing: inherit;
+  font-size: inherit;
+  font-family: 'Garamond';
+}
+
+/*Set basic settings for background, headers, paragraphs, etc... */
+body {
+  background-color: #556573;
+  font-family: Garamond;
+  color: #F2E0D5;
+}
+
+h1 {
+  font-size: 4rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/*Format links*/
+a:visited {
+  color: #BF8275;
+  text-decoration: none;
+}
+a:link {
+  color: #BF8275;
+  text-decoration: none;
+}
+a:hover {
+  color: #F2A488;
+  text-decoration: underline;
+}
+a:active {
+  color: black;
+}
+
+/*Format images */
+.my-img {
+  width: 200px;
+  height: auto;
+}
+
+/*Format page structure*/
+.page-wrap {
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+}
+
+.right-col {
+  display:flex;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+
+
+.left-col {
+  padding-left: 25%;
+  padding-right: 25%;
+}
+
+.main-content p {
+  font-size: 2rem;
+}
+
+
+/*Format navigation*/
+nav ul li a {
+  font-size: 3rem;
+}
+
+a.current-page {
+  color: #101A26;
+  text-decoration: none;
+}
+
+/*Format publications*/
+.pubs li {
+  font-size: 1.5rem;
+}
+
+ol.pubs li {
+  margin: 2rem 0;
+}
+
+cite {
+  font-style: normal;
+}
