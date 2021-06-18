@@ -8,38 +8,99 @@
     <link rel="stylesheet" href="../css/style.css">
   </head>
   <body>
-    <h1>Programming!!</h1>
+    <h1>Programming!</h1>
     <hr>
     <div class="page-wrap">
       <section class="center-col-nav">
         <nav>
           <ul>
             <li>
-              <a class="local-link" href="#eds-code">EDS Code</a>
+              <a class="local-link" href="#retrosite">Retrosite</a>
+            </li>
+            <li>
+              <a class="local-link" href="#eds-code">EDS</a>
             </li>
           </ul>
         </nav>
       </section>
       <section class="center-col">
         <section class="main-content">
+          <p>
+            I apologize in advance for image quality, I only used 72 DPI 
+            for web images.
+          </p>
           <section class="EDS-program">
-            <h2 id='eds-code'>Electron Dispersion Spectroscopy!</h2>
+            <h2 id='retrosite'>Retrosynthesis Website</h2>
             <p>
-               The first scientific program I wrote was in MATLAB! I was
-               a wee little undergrad at Madison doing research on some metal
-               super-alloys. We decided to utilize electron dispersion 
-               spectroscopy (EDS) to analyze the chemical compositions of the
-               materials, and Dave Grierson (a visiting scientist at 
-               Madison/super cool guy) suggested we analyze the data manaully.
-               For that reason, we wrote this EDS code!
+              I would decribe this program as my first useful contribution to
+              the Ramprasad group at GaTech. Lihua Chen (a postdoc in the group
+              and super cool person) designed an algorithm that takes a polymer
+              as input and then outputs predicted reactants and a 
+              score indicating the ease to synthesize it. I was initially 
+              tasked with designing the front and backend interface for this 
+              program.
+            </p>
+            <img class="content-image" 
+                 src="../Images/retrosite_figures/frontend.png"
+                 alt="Image of EDS code interface">
+            <p>
+              Users would input a target polymer with the smiles string and
+              user defined variables being passed back to my flask app that 
+              interfaced
+              with Lihua's code. I then used rdkit to generate images of the
+              target polymer and predicted reactants, and returned the
+              relative synthesizability score her code generated, 
+              with high representing a score &#62; 0.7 on a scale of 0 to 1. 
+              After this I used html 
+              templates and jinja to append a table to the end of the page.
+            </p>
+            <img class="content-image" 
+                 src="../Images/retrosite_figures/frontend_table.png"
+                 alt="Image of EDS code interface">
+            <p>
+              Tragically, we never used this design, as we wanted to integrate
+              the code with <a href='https://www.polymergenome.org'>
+              Polymer Genome</a>. Still, I got to learn how to use jinja, and 
+              it was great practice for my html/css (you'll notice I was very
+              effective at duplicating the Polymer Genome aesthetic for my 
+              original app interface :).
+              My Flask backend was still used, 
+              although I had to modify it to return json of the images and 
+              scores so Chiho (another cool person/research scientist) 
+              could make the table in Polymer Genome.
+            </p>
+            <img class="content-image" 
+                 src="../Images/retrosite_figures/pg.png"
+                 alt="Image of EDS code interface">
+            <p>
+              The last interesting bit about this program was I got to learn how
+              to deploy the backend using kuberetes, openshift, and docker. 
+              This was
+              more challenging than I was expecting, but still fun. The hardest
+              part was figuring out how to give the correct user id
+              permissions in the Dockerfile so they would transfer over to the
+              openshift account GaTech set up for me. Shout out to Mark 
+              Danielson who was super helpful in teaching me how to do it.
+            </p>
+          </section>
+          <section class="EDS-program">
+            <h2 id='eds-code'>Electron Dispersion Spectroscopy</h2>
+            <p>
+              The first scientific program I wrote was in MATLAB I was
+              a wee little undergrad at Madison doing research on some metal
+              super-alloys. We decided to utilize electron dispersion 
+              spectroscopy (EDS) to analyze the chemical compositions of the
+              materials, and Dave Grierson (a visiting scientist at 
+              Madison/super cool guy) suggested we analyze the data with our
+              own software. For that reason, we wrote this EDS code.             
             </p>
             <img class="content-image" src="../Images/eds_figures/Figure_1.png"
                  alt="Image of EDS code interface">
             <p>
-               This is an image of the interface! The program reads in some EDS
-               csv files and then displays a grey image of the sample. The user
-               can then perform an assortment of analyses of the sample. These
-               include:
+              This is an image of the interface! The program reads in some EDS
+              csv files and then displays a grey image of the sample. The user
+              can then perform an assortment of analyses of the sample. These
+              include:
             </p>
             <ul>
               <li>
@@ -61,47 +122,44 @@
                      alt="Image of EDS code interface">
               </li>
               <li>
-                <p>and, my personal favorite, threshold mapping!!</p>
+                <p>and, my personal favorite, threshold mapping!</p>
                 <img class="content-image" 
                      src="../Images/eds_figures/Figure_5.png"
                      alt="Image of EDS code interface">
               </li>
             </ul>
             <p>
-               This was my first ever custom program, so it always has a special
-               place in my heart &lt;3. I wrote the code for the interface, 
-               the loading of the data, for performing
-               the threshold mapping, converting between atomic and weight 
-               percentage, and choosing elements to view data on. Dave and I 
-               collaborated on the line-scan code, element mapping, and 
-               region-of-interest analysis (with him doing a lot of the more
-               complicated math parts haha). Dave also added the ROI list, 
-               Full view, and Zoom parts. 
+              This was my first ever custom program, so it always has a special
+              place in my heart &lt;3. I wrote the code for the interface, 
+              the loading of the data, for performing
+              the threshold mapping, converting between atomic and weight 
+              percentage, and choosing elements to view data on. Dave and I 
+              collaborated on the line-scan code, element mapping, and 
+              region-of-interest analysis. Dave also added the ROI list, 
+              Full view, and Zoom parts. 
             </p>
             <p>
-               It was a useful tool for our EDS analyses! We used the outputs
-               in a number of publications. The source code is on my github
-               page as well for people to use. I would like to publish it, but
-               the work isn't really novel, so maybe I can submit to an open
-               source software journal sometime instead.
+              It was a useful tool for our EDS analyses. We used the outputs
+              in a number of publications. The source code is on my github
+              page as well for people to use. I would like to publish it, but
+              the work isn't really novel, so maybe I can submit to an open
+              source software journal sometime instead.
             </p>
             <p>
-               In hindsight, I would have preferred to write this software in
-               Python. It is open source and a much better programming language,
-               in my opinion. I actually kind of despise MATLAB now haha. Still,
-               when I wrote this code, I didn't know how to write anything in
-               Python, and I only recently started making graphic user 
-               interfaces (GUIs) in Python.
+              In hindsight, I would have preferred to write this software in
+              Python since it is open source. Still,
+              when I wrote this code, I didn't know how to write anything in
+              Python, and only in 2020 did I start making graphic user 
+              interfaces in Python with tkinter and Qt5. Dave also didn't know
+              Python, so MATLAB was best suited to the job at the time.
             </p>
             <p>
-               I also would have tried to make the code more user friendly. A
-               lot of the analyses depend on color, which makes it inaccessible
-               to colorblind people. I try to be more concious of that these
-               days. If people were ever interested in it, I'd be happy to 
-               add additional improvements, although, I'm not sure I still have
-               access to a MATLAB subscription :)
+              I also would have tried to make the code more user friendly. A
+              lot of the analyses depend on color, which makes it inaccessible
+              to colorblind people. I try to be more concious of that these
+              days. If people were ever interested in it, I'd be happy to 
+              add additional improvements though.
             </p>
-
           </section>
         </section>
       </section>
@@ -117,6 +175,13 @@
             </li>
             <li>
               <a class="current-page" href="my_codes.html">Programs</a>
+            </li>
+            <li>
+              <a href="#">
+                <form method="get" action="../pdfs/Kern_Joseph_CV.pdf">
+                  <button type="submit">CV</button>
+                </form>
+              </a>
             </li>
           </ul>
         </nav>

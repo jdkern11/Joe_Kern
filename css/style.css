@@ -35,6 +35,7 @@ p {
 
 ul {
   list-style-type: none;
+  padding: 0;
 }
 
 /*Format links*/
@@ -52,6 +53,21 @@ a:hover {
 }
 a:active {
   color: black;
+}
+
+/*Format download button*/
+a:hover form button {
+  color: #F2A488;
+  text-decoration: underline;
+  cursor: pointer;
+}
+form button {
+  background-color: #556573;
+  width: 100%;
+  text-align: left;
+  border: None;
+  color: #BF8275;
+  padding: 0;
 }
 
 /*Format images */
@@ -146,3 +162,5 @@ ol.pubs li {
 cite {
   font-style: normal;
 }
+
+
