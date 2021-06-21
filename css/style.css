@@ -43,7 +43,7 @@ p {
 }
 
 a {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 ul {
@@ -121,10 +121,6 @@ section {
 }
 
 .main-content p {
-  font-size: 2rem;
-}
-
-.main-content a {
   font-size: 2rem;
 }
 
