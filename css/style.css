@@ -124,6 +124,9 @@ section {
   font-size: 2rem;
 }
 
+.main-content a {
+  font-size: 2rem;
+}
 
 /*Format page with left links and scrolling of main info*/
 .center-col {
