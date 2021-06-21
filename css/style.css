@@ -1,3 +1,12 @@
+/* Define variables for color scheme */
+:root {
+  --bg_color: #556573;
+  --text_color: #F2E0D5;
+  --link_color: #BF8275;
+  --link_hover_color: #F2A488;
+  --link_active_color: black;
+  --link_current_page_color: #101A26;
+}
 /* Set all box sizing to border box*/
 html {
   box-sizing: border-box;
@@ -15,9 +24,9 @@ html {
 
 /*Set basic settings for background, headers, paragraphs, etc... */
 body {
-  background-color: #556573;
+  background-color: var(--bg_color);
   font-family: Garamond;
-  color: #F2E0D5;
+  color: var(--text_color);
 }
 
 h1 {
@@ -33,6 +42,10 @@ p {
   font-size: 1.5rem;
 }
 
+a {
+  font-size: 1.5rem;
+}
+
 ul {
   list-style-type: none;
   padding: 0;
@@ -40,33 +53,34 @@ ul {
 
 /*Format links*/
 a:visited {
-  color: #BF8275;
+  color: var(--link_color);
   text-decoration: none;
 }
 a:link {
-  color: #BF8275;
+  color: var(--link_color);
   text-decoration: none;
 }
 a:hover {
-  color: #F2A488;
+  color: var(--link_hover_color);
   text-decoration: underline;
 }
 a:active {
-  color: black;
+  color: var(--link_active_color);
 }
 
 /*Format download button*/
-a:hover form button {
-  color: #F2A488;
+a:hover button {
+  color: var(--link_hover_color);
   text-decoration: underline;
   cursor: pointer;
 }
-form button {
-  background-color: #556573;
+
+button {
+  background-color: var(--bg_color);
   width: 100%;
   text-align: left;
   border: None;
-  color: #BF8275;
+  color: var(--link_color);
   padding: 0;
 }
 
@@ -141,7 +155,7 @@ nav ul li a {
 }
 
 a.current-page {
-  color: #101A26;
+  color: var(--link_current_page_color);
   text-decoration: none;
 }
 
@@ -162,5 +176,3 @@ ol.pubs li {
 cite {
   font-style: normal;
 }
-
-
