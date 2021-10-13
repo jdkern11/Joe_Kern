@@ -16,6 +16,9 @@
         <nav>
           <ul>
             <li>
+              <a class="local-link" href="#ga">PolyGA</a>
+            </li>
+            <li>
               <a class="local-link" href="#retrosite">Retrosite</a>
             </li>
             <li>
@@ -33,7 +36,82 @@
             I apologize in advance for image quality, I only used 72 DPI 
             for web images.
           </p>
-          <section class="EDS-program">
+          <section class="polyga">
+            <h2 id='ga'>PolyGA</h2>
+            <p>
+              <a href="https://link.springer.com/article/10.1007%2Fs10853-021-06520-x">
+              PolyGA is a genetic algorithm I use to design hypothetical
+              polymers. 
+              </a>
+              Hypothetical means they may not actually be 
+              synthesizable, but they are, technically, possible polymers.
+              The way a genetic algorithm works is via crossover, mutation and 
+              a fitness assessment (just like in nature). Some initial 
+              population competes to survive in an environment, those best
+              suited to the environment breed, crossing over their genes, 
+              and random mutations cause new, potentially beneficial, genes
+              to emerge.
+            </p>
+            <p>
+              Here is an excerpt from the background page on 
+              <a href=https://github.com/Ramprasad-Group/polyga>my github page
+              for polyga</a>
+            </p>
+            <p>
+            <img class="content-image" 
+                 src="../Images/ga_images/circle-of-life.png"
+                 alt="Image of GA">
+"At the top of the circle is selection. This is where certain animals (bears in
+this case) are selected to breed based on environmental (or cultural) factors.
+In this case, global warming (an environmental factor) is causing temperatures 
+to rise, killing our poor polar bears that are maladapted to warm environments. 
+Thus, only brown bears breed during the next "crossover" phase.
+            </p>
+            <p>
+In this phase, animals (or polymers) breed, exchanging genetic material and
+creating new children, potentially more suited to the new environment. In 
+nature, this crossover is of genes, but for us it will depend on
+the design task. For instance, GAs can be used to tune hyperparameters of 
+machine learning models, in which case the values of those 
+hyperparameters are "crossed over" or mixed. For polymers, chemically unique 
+blocks are crossed over (seen in the image below). The main point is, 
+this crossing over generates a new child that may have the best (or worst) 
+features of both parents."
+            <img class="content-image" 
+                 src="../Images/ga_images/crossover.png"
+                 alt="Image of crossover">
+            </p>
+            <p>
+              For polymers, we predict their properties using machine learning
+              (ml) algorithms, then we try to evolve them using some 
+              mathematical formulation (perhaps a simple linear combination of
+              MinMaxScaled properties). Those with the highest score would
+              be chosen for the next generation. I explain in more detail in
+              <a href=https://github.com/Ramprasad-Group/polyga/blob/main/tutorials/basic/basic.md>
+              the tutorial on my polyga github page.
+              </a>
+            </p>
+            <p>
+              This was a fun project to work on, and is still in development. I 
+              refactored the entire original code we used so that it was easier
+              to upgrade and maintain (splitting certain algorithms into functions
+              and rewriting some variables so the naming made more sense).
+            </p>
+            <p>
+              I also reimplemented some things. For instance, I made a land and
+              nation class so I could have different environments 
+              polymers evolve in. Then, I implemented immigration between
+              nations to increase genetic diversity (theoretically). 
+              For example, I may try to evolve polymers that
+              can resist high-temperatures in one nation, high-electromagnetic 
+              fields in another, and both in a third, then have migration occur
+              between the three to increase diversity. Those in the 
+              high-temperature land might evolve different functional groups
+              than those in the high electromagnetic-field one. It's still
+              a work in progress, but very fun!
+            </p>
+          </section>
+          <section class="retrosynthesis">
             <h2 id='retrosite'>Retrosynthesis Website</h2>
             <p>
               I would decribe this program as my first useful contribution to
@@ -90,7 +168,7 @@
           <section class="EDS-program">
             <h2 id='eds-code'>Electron Dispersion Spectroscopy</h2>
             <p>
-              The first scientific program I wrote was in MATLAB I was
+              The first scientific program I wrote was in MATLAB when I was
               a wee little undergrad at Madison doing research on some metal
               super-alloys. We decided to utilize electron dispersion 
               spectroscopy (EDS) to analyze the chemical compositions of the
