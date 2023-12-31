@@ -1,0 +1,14 @@
+.container {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+
+.content {
+  position: absolute;
+  z-index: 1;
+}

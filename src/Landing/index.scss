@@ -1,0 +1,29 @@
+@use "utilities/colorscheme" as v;
+
+.Landing {
+  text-align: center;
+}
+
+.TopImage {
+  height:auto;
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+
+.Container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.Column {
+  flex: 1;
+}
+
+.Wide {
+  flex: 2;
+  padding-right: 5%;
+  padding-left: 5%;
+}

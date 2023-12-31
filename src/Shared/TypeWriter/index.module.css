@@ -1,0 +1,10 @@
+.invisibleText p {
+	color:rgba(0,0,0,0)
+}
+
+
+/*Add ability to preserve \n*/
+p {
+  white-space: pre-line;
+  vertical-align: bottom;
+}

@@ -1,0 +1,15 @@
+.Image {
+  width: 50%;
+  margin: 10px;
+}
+
+.scroll-image {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.scroll-image.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

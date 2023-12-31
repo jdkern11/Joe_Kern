@@ -1,0 +1,64 @@
+@use "utilities/colorscheme" as cs;
+
+body {
+  background: linear-gradient(
+    45deg,
+    #87CEEB80 20%,
+    #FFD3A580 40%,
+    #FFD3A5FF 50%,
+    #FFA07AFF 60%,
+    #FFA07A80 80%,
+    #FFD3A580 100%
+  );
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #000000;
+  font-size: 1.5vw;
+}
+
+a {
+  color: #000000;
+}
+
+a:hover {
+  color: cs.$c2;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  padding-left: 1vw;
+  list-style-position: inside;
+}
+
+ol {
+  padding-left: 1vw;
+  list-style-position: inside;
+}
+
+ul li {
+  list-style-type: none;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+}
+
+ol li {
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+  padding-left: 0;
+  list-style-position: inside;
+}
+
+p {
+  line-height: 1.5; 
+}
+
+h1 {
+  font-size: 3vw;
+}
