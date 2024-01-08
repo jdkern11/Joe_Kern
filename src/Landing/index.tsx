@@ -2,7 +2,6 @@ import React from 'react';
 import Agenda from 'Agenda';
 import Story from 'Story';
 import Details from 'Details';
-import Music from 'Music';
 import Registry from 'Registry';
 import Menu from 'Menu';
 import ImageGallery from 'ImageGallery';
@@ -44,9 +43,6 @@ const Landing = () => {
           </section>
           <section id="story">
             <Story />
-          </section>
-          <section id="music">
-            <Music />
           </section>
           <section id="registry">
             <Registry />

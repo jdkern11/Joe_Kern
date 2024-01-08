@@ -7,20 +7,30 @@ const Registry = () => {
       <h1>Registry</h1>
       <div className="Registry">
         <p>
-          The following is entirely optional, there is no expectation that any gift or donations are given!
-    We both have many of the typical registry items already, instead, we are asking those who wish to give money to use for one of two things: funds to do exciting stuff on our honeymoon to Greece, or donations to one of three charities!
+          Completely optional, there is no expectation that any gift or donations are 
+          given! If you wish, in lieu of items, we ask you to give money
+          for one of two things: funds to do exciting stuff on our honeymoon to Japan 
+          or donations to one of the charities listed below!
+        </p>
+        <h2>Honeymoon Fund</h2>
+        <p>
+          Join us on our 19-day Japan adventure, where we'll explore at least 5 incredible cities! Your contribution ensures you'll get some fantastic pics in return! Plus, if you contribute to specific activities, you'll receive pics of those experiences. Don't worry about the suggested amounts; give whatever makes you happy! 🇯🇵📸✨
         </p>
         <p>
-          If you want to give to our honeymoon, any of below items will net you a picture of the couple engaging in the activity:
+          Venmo: @Camilla-Johnson-1 (x1570 for last 4 digits of phone number to verify correct account)
+
         </p>
         <ol className="Registry">
-          <li className>Buy the bride a drink: $5</li>
-          <li>Activity: </li>
-          <li>Activity: </li>
-          <li>Activity: </li>
+          <li>Kyoto Geisha Tea Ceremony for 2: $100</li>
+          <li>Hiroshima Peace Memorial Museum for 2:  $3 (yes, $3!)</li>
+          <li>Relaxation at an Onsen for 2: $25</li>
+          <li>Delicious ramen and sushi: $50</li>
+          <li>Buy the bride a drink: $5</li>
+          <li>Offset lodging and/or transportation costs: any amount</li>
         </ol>
+        <h2>Charity</h2>
         <p>
-          If you would instead like to give to charity, we ask you to give to one of the following:
+          If you would instead like to give to charity, we ask you to give to one of the following (you can reach us at josephdanielkern@gmail.com if you'd like the charity to send us a message):
         </p>
         <ol className="Registry">
           <li>
