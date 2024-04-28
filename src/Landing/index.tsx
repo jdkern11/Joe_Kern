@@ -19,7 +19,7 @@ const Landing = () => {
       <img src='images/banner.jpg' alt="background" className="TopImage" id="landing"/>
       <section className="Container">
         <section className="Column">
-          <ImageGallery min={1} max={20} />
+          <ImageGallery min={1} max={24} />
         </section>
         <section className="Wide">
           <section>
@@ -49,7 +49,7 @@ const Landing = () => {
           </section>
         </section>
         <section className="Column">
-          <ImageGallery min={21} max={41} />
+          <ImageGallery min={25} max={50} />
         </section>
       </section>
     </div>
