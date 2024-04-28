@@ -1,6 +1,6 @@
 import React from 'react';
-import '../../App.css';
-import styles from './index.module.css';
+import '../../index.scss';
+import styles from './index.scss';
 
 /**
  * Runs typewriter effect on input text
@@ -14,14 +14,15 @@ import styles from './index.module.css';
  * @param {number} typingSpeed Speed at which to type text.
  * @param {number} deletingSpeed Speed at which to delete text.
  */
-export const TypeWriter = ({ textToWrite, delay=0, reverse=false,
-    setAnimationDone=null, typingSpeed=0.05, deletingSpeed=0.025}) => {
+export const TypeWriter = ({ textToWrite, delay=0.5, reverse=false,
+    setAnimationDone=null, typingSpeed=0.1, deletingSpeed=0.025, elementType="p"}) => {
   const [written, setWritten] = React.useState(0);
   const [text, setText] = React.useState(""); 
   // Change timeout time after first pass to simulate typing
   const [writeDelay, setWriteDelay] = React.useState(delay);
   const [reversed, setReversed] = React.useState(false);
   const [spaceFill, setSpaceFill] = React.useState(true);
+  const Element = elementType;
   
   React.useEffect(() => {
     const timer = setTimeout(() => {
@@ -55,9 +56,8 @@ export const TypeWriter = ({ textToWrite, delay=0, reverse=false,
   return (
     <>
       {spaceFill ?
-        <div className={styles.invisibleText}>
-          <p>filler</p>
-        </div>: <p>{text}</p>
+        <Element className="invisibleText">filler</Element>
+        : <Element>{text}</Element>
       }
     </>
   );

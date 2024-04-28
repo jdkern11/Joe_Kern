@@ -1,7 +1,5 @@
 import 'index.scss';
 import './index.scss';
-import { TypeWriter } from 'Shared/TypeWriter';
-
 
 const Story = () => {
   return (
